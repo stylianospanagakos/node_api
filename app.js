@@ -1,9 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 
-var sendgrid = require('./sendgrid');
-var sparkpost = require('./sparkpost');
-
 var port = process.env.PORT || 3000;
 var app = express();
 
