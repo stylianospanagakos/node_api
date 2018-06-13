@@ -15,7 +15,7 @@ module.exports = {
             html:'<html><body><p>Testing SparkPost - the world\'s most awesomest email service!</p></body></html>'
             },
             recipients: [
-                {address: 'developers+nodejs@sparkpost.com'}
+                {address: 'panagakos.stylianos87+sparkpost@gmail.com'}
             ]
         })
         .then(data => {
