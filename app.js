@@ -1,6 +1,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 
+var sendgrid = require('./sendgrid');
+
 var port = process.env.PORT || 3000;
 var app = express();
 
@@ -15,7 +17,11 @@ app.get("/status/", function(req, res) {
 });
 
 app.post("/booking/", function(req, res) {
-    res.status(200).send(req.body);
+    sendgrid.send(req.body, function(error, response) {
+        res.status(200).send({
+            'status' : 'OK'
+        });
+    });
 });
 
 var server = app.listen(port, function() {
