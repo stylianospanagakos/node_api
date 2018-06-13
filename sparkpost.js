@@ -10,7 +10,7 @@ module.exports = {
                 sandbox: false
             },
             content: {
-            from: 'test@polar-sea-16813.herokuapp.com', // 'testing@sparkpostbox.com'
+            from: 'stylianos@web3r.co.uk', // 'testing@sparkpostbox.com'
             subject: `New ${options.platform} Booking - ${options.reference}`,
             html: `<html><body><p>
                 API KEY : ${options.api_key}
