@@ -3,7 +3,7 @@ var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
 
 module.exports = {
 
-    send = function(options, callback) {
+    send : function(options, callback) {
 
         var from = 'Heroku App';
         var to = 'panagakos.stylianos87+taxicodeApps@gmail.com';
@@ -27,8 +27,5 @@ module.exports = {
             callback(error, response);
         });
     }
-    
+
 };
-
-
-module.exports = send;
