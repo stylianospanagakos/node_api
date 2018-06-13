@@ -24,6 +24,8 @@ module.exports = {
         });
     
         sg.API(request, function(error, response) {
+            console.log(error);
+            console.log(response);
             callback(error, response);
         });
     }
