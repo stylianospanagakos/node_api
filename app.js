@@ -14,6 +14,10 @@ app.get("/status/", function(req, res) {
     });
 });
 
+app.post("/booking/", function(req, res) {
+    res.status(200).send(req.body);
+});
+
 var server = app.listen(port, function() {
     console.log("app running on port.", server.address().port);
 });
