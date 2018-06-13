@@ -10,7 +10,7 @@ module.exports = {
                 sandbox: false
             },
             content: {
-            from: 'testing@' + process.env.SPARKPOST_SANDBOX_DOMAIN, // 'testing@sparkpostbox.com'
+            from: 'help@taxicode.com', // 'testing@sparkpostbox.com'
             subject: `New ${options.platform} Booking - ${options.reference}`,
             html: `<html><body><p>
                 API KEY : ${options.api_key}
