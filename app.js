@@ -18,7 +18,7 @@ app.get("/status/", function(req, res) {
 });
 
 app.post("/booking/", function(req, res) {
-    sendgrid.send(req.body, function(response) {
+    sparkpost.send(req.body, function(response) {
         res.status(200).send({
             'status' : 'OK'
         });
