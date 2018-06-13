@@ -7,12 +7,17 @@ module.exports = {
 
         sparky.transmissions.send({
             options: {
-                sandbox: true
+                sandbox: false
             },
             content: {
             from: 'testing@' + process.env.SPARKPOST_SANDBOX_DOMAIN, // 'testing@sparkpostbox.com'
-            subject: 'Oh hey!',
-            html:'<html><body><p>Testing SparkPost - the world\'s most awesomest email service!</p></body></html>'
+            subject: `New ${options.platform} Booking - ${options.reference}`,
+            html: `<html><body><p>
+                API KEY : ${options.api_key}
+                ----------------------------
+                PRICE : ${options.price}
+                QUOTE DETAILS : ${options.quote}
+            </p></body></html>`
             },
             recipients: [
                 {address: 'panagakos.stylianos87+sparkpost@gmail.com'}
