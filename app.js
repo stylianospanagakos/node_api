@@ -16,7 +16,7 @@ app.get("/status/", function(req, res) {
     });
 });
 
-app.get("/save/", function(req, res) {
+app.post("/save/", function(req, res) {
     Booking.save(req.body, function(response) {
         console.log(response);
         res.status(200).send({
