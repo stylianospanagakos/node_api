@@ -12,7 +12,7 @@ app.use(middleware.apiKeyCheck);
 
 app.get("/status/", function(req, res) {
     res.status(200).send({
-        status : "OK"
+        status : process.env.NODE_API_STATUS || "OK"
     });
 });
 
